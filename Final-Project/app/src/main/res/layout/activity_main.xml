@@ -41,18 +41,18 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:hint="@string/label_sex"
-            android:textSize="16sp"
+            android:textSize="16sp"/>
 
-        <RadioGroup android:id="@+id/orientation"
+        <RadioGroup android:id="@+id/sex"
             android:orientation="horizontal"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:padding="5px">
             <RadioButton
-                android:id="@+id/horizontal"
+                android:id="@+id/male"
                 android:text="@string/label_male" />
             <RadioButton
-                android:id="@+id/vertical"
+                android:id="@+id/female"
                 android:text="@string/label_female" />
         </RadioGroup>
 
@@ -86,7 +86,6 @@
                 android:text="@string/label_phone"
                 android:textSize="16sp" />
 
-
             <EditText
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
@@ -107,7 +106,6 @@
                 android:text="@string/label_email"
                 android:textSize="16sp" />
 
-
             <EditText
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
@@ -116,6 +114,94 @@
                 android:id="@+id/editText"
                 android:layout_weight="0.18" />
         </LinearLayout>
+
+        <TextView
+            style="@style/HeaderTextStyle"
+            android:layout_width="350dp"
+            android:layout_height="4dp"
+            android:background="@color/colorBlue"
+            android:layout_marginTop="20dp"
+            />
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/label_register_learn"
+            android:textAllCaps="true"
+            android:textAlignment="center"
+            android:textSize="18sp"
+            android:layout_marginTop="10dp"
+            />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="horizontal"
+            android:weightSum="1">
+
+            <TextView
+                android:layout_width="64dp"
+                android:layout_height="wrap_content"
+                android:text="@string/label_tutor"
+                android:textSize="16sp"
+                android:layout_weight="0.18" />
+            <Spinner
+                android:layout_width="100dp"
+                android:layout_height="20dp"
+
+                android:layout_weight="0.32" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="horizontal"
+            android:weightSum="1">
+
+            <TextView
+                android:layout_width="64dp"
+                android:layout_height="wrap_content"
+                android:text="@string/label_course"
+                android:textSize="16sp"
+                android:layout_weight="0.18" />
+            <Spinner
+                android:layout_width="100dp"
+                android:layout_height="20dp"
+
+                android:layout_weight="0.32" />
+        </LinearLayout>
+
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="@string/label_hour"
+            android:textSize="16sp"
+            />
+
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="@string/label_tuition_fee"
+            android:textSize="16sp"
+            />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:hint="@string/label_pay"
+            android:textSize="16sp"/>
+
+        <RadioGroup android:id="@+id/pay"
+            android:orientation="horizontal"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:padding="5px">
+            <RadioButton
+                android:id="@+id/male"
+                android:text="@string/label_yes" />
+            <RadioButton
+                android:id="@+id/female"
+                android:text="@string/label_no" />
+        </RadioGroup>
 
 
         <Button

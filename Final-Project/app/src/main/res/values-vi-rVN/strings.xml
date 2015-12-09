@@ -11,4 +11,12 @@
     <string name="label_select_job">Chọn nghề của bạn</string>
     <string name="label_phone">Điện thoại:</string>
     <string name="label_email">Thư điện tử:</string>
+    <string name="label_register_learn">Đăng ký học Tiếng Anh</string>
+    <string name="label_tutor">Giáo viên:</string>
+    <string name="label_course">Khóa học:</string>
+    <string name="label_hour">Số giờ</string>
+    <string name="label_tuition_fee">Học phí</string>
+    <string name="label_yes">Có</string>
+    <string name="label_no">Không</string>
+    <string name="label_pay">Nộp học phí:</string>
 </resources>

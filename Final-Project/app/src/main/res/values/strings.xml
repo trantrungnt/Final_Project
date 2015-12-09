@@ -11,4 +11,12 @@
     <string name="label_select_job">Select your job</string>
     <string name="label_phone">Phone:</string>
     <string name="label_email">Email:</string>
+    <string name="label_register_learn">Register to learn English</string>
+    <string name="label_tutor">Tutor:</string>
+    <string name="label_course">Courses:</string>
+    <string name="label_hour">Hour</string>
+    <string name="label_tuition_fee">Tuition Fee</string>
+    <string name="label_yes">Yes</string>
+    <string name="label_no">No</string>
+    <string name="label_pay">Pay:</string>
 </resources>
