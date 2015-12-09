@@ -1,0 +1,11 @@
+<resources>
+    <string name="app_name">Học Tiếng Anh</string>
+    <string name="action_settings">Cấu hình</string>
+    <string name="label_your_information">THÔNG TIN CỦA BẠN</string>
+    <string name="label_register">Đăng ký</string>
+    <string name="label_name">Họ và tên</string>
+    <string name="label_male">Nam</string>
+    <string name="label_female">Nữ</string>
+    <string name="label_sex">Giới tính:</string>
+    <string name="label_job">Chọn nghề của bạn</string>
+</resources>
