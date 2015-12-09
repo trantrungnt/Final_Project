@@ -7,5 +7,8 @@
     <string name="label_male">Male</string>
     <string name="label_female">Female</string>
     <string name="label_sex">Sex:</string>
-    <string name="label_job">Select your job</string>
+    <string name="label_job">Job:</string>
+    <string name="label_select_job">Select your job</string>
+    <string name="label_phone">Phone:</string>
+    <string name="label_email">Email:</string>
 </resources>

@@ -7,5 +7,8 @@
     <string name="label_male">Nam</string>
     <string name="label_female">Nữ</string>
     <string name="label_sex">Giới tính:</string>
-    <string name="label_job">Chọn nghề của bạn</string>
+    <string name="label_job">Nghề nghiệp:</string>
+    <string name="label_select_job">Chọn nghề của bạn</string>
+    <string name="label_phone">Điện thoại:</string>
+    <string name="label_email">Thư điện tử:</string>
 </resources>

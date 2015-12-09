@@ -21,12 +21,12 @@
             android:text="@string/label_your_information"
             android:textAllCaps="true"
             android:textAlignment="center"
-            android:textSize="20sp"
+            android:textSize="18sp"
             />
         <TextView
             style="@style/HeaderTextStyle"
             android:layout_width="350dp"
-            android:layout_height="16dp"
+            android:layout_height="4dp"
             android:background="@color/colorBlue"
             />
 
@@ -34,40 +34,88 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:hint="@string/label_name"
+            android:textSize="16sp"
             />
 
         <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:hint="@string/label_sex"
+            android:textSize="16sp"
+
+        <RadioGroup android:id="@+id/orientation"
+            android:orientation="horizontal"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:padding="5px">
+            <RadioButton
+                android:id="@+id/horizontal"
+                android:text="@string/label_male" />
+            <RadioButton
+                android:id="@+id/vertical"
+                android:text="@string/label_female" />
+        </RadioGroup>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="horizontal"
+            android:weightSum="1">
+
+            <TextView
+                android:layout_width="64dp"
+                android:layout_height="wrap_content"
+                android:text="@string/label_job"
+                android:textSize="16sp"
+                android:layout_weight="0.18" />
+            <Spinner
+                android:layout_width="100dp"
+                android:layout_height="20dp"
+
+                android:layout_weight="0.32" />
+        </LinearLayout>
+
+        <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="@string/label_sex"
-            android:textSize="20sp"
-            />
+            android:orientation="horizontal">
 
-        <RadioButton
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/label_phone"
+                android:textSize="16sp" />
+
+
+            <EditText
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:inputType="phone"
+                android:ems="10"
+                android:id="@+id/editText"
+                android:layout_weight="0.18" />
+        </LinearLayout>
+
+        <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:paddingRight="30dp"
-            android:text="@string/label_male"
-            android:textSize="20sp"
-            android:checked="true" />
+            android:orientation="horizontal">
 
-        <RadioButton
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:paddingRight="30dp"
-            android:text="@string/label_female"
-            android:textSize="20sp"
-        />
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/label_email"
+                android:textSize="16sp" />
 
 
-        <Spinner
-            android:layout_width="100dp"
-            android:layout_height="wrap_content"
-
-
-        />
-
-
+            <EditText
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:inputType="textEmailAddress"
+                android:ems="10"
+                android:id="@+id/editText"
+                android:layout_weight="0.18" />
+        </LinearLayout>
 
 
         <Button
