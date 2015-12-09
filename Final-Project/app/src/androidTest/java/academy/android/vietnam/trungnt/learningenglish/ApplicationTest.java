@@ -1,4 +1,4 @@
-package academy.android.vietnam.trungnt.learningeinglish;
+package academy.android.vietnam.trungnt.learningenglish;
 
 import android.app.Application;
 import android.test.ApplicationTestCase;
