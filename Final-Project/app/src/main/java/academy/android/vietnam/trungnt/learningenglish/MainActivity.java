@@ -26,6 +26,12 @@ public class MainActivity extends AppCompatActivity {
     public void addListenerOnSpinnerItemSelection() {
         spn_jobs = (Spinner) findViewById(R.id.spn_job);
         spn_jobs.setOnItemSelectedListener(new CustomOnItemSelectedListener());
+
+        spn_tutors = (Spinner) findViewById(R.id.spn_tutor);
+        spn_tutors.setOnItemSelectedListener(new CustomOnItemSelectedListener());
+
+        spn_courses = (Spinner) findViewById(R.id.spn_course);
+        spn_courses.setOnItemSelectedListener(new CustomOnItemSelectedListener());
     }
 
 
@@ -33,13 +39,14 @@ public class MainActivity extends AppCompatActivity {
     public void addListenerOnButton() {
 
         spn_jobs = (Spinner) findViewById(R.id.spn_job);
+        spn_tutors = (Spinner) findViewById(R.id.spn_tutor);
+        spn_courses = (Spinner) findViewById(R.id.spn_course);
         btnRegister = (Button) findViewById(R.id.btnRegister);
-        txtTemp = (TextView) findViewById(R.id.selection);
 
         btnRegister.setOnClickListener(new OnClickListener() {
             @Override
             public void onClick(View v) {
-                txtTemp.setText(String.valueOf(spn_jobs.getSelectedItem()));
+                //txtTemp.setText(String.valueOf(spn_jobs.getSelectedItem()));
             }
         });
     }

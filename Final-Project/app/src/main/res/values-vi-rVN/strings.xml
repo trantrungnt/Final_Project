@@ -27,4 +27,19 @@
         <item>Bác sỹ</item>
         <item>Lập trình viên</item>
     </string-array>
+    <string name="promt_tutor">Chọn giáo viên</string>
+    <string-array name="arr_tutor">
+        <item>Đỗ Văn Kiệm</item>
+        <item>Trang Linh</item>
+        <item>Kevin</item>
+        <item>Vân Anh</item>
+        <item>Nancy</item>
+    </string-array>
+    <string name="promt_course">Chọn khóa học</string>
+    <string-array name="arr_course">
+        <item>TOEIC</item>
+        <item>TOEFL</item>
+        <item>Grammar</item>
+        <item>Speak</item>
+    </string-array>
 </resources>

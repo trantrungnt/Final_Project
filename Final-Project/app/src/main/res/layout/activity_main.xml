@@ -22,20 +22,21 @@
             android:textAllCaps="true"
             android:textAlignment="center"
             android:textSize="18sp"
-            />
+        />
         <TextView
             style="@style/HeaderTextStyle"
             android:layout_width="350dp"
             android:layout_height="4dp"
             android:background="@color/colorBlue"
-            />
+        />
 
         <EditText
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:hint="@string/label_name"
             android:textSize="16sp"
-            />
+            android:id="@+id/edit_txtName"
+        />
 
         <TextView
             android:layout_width="wrap_content"
@@ -71,10 +72,8 @@
             <Spinner
                 android:id="@+id/spn_job"
                 android:entries="@array/arr_job"
-                android:prompt="@string/promt_job"
                 android:layout_width="100dp"
                 android:layout_height="20dp"
-
                 android:layout_weight="0.32" />
         </LinearLayout>
 
@@ -94,7 +93,7 @@
                 android:layout_height="wrap_content"
                 android:inputType="phone"
                 android:ems="10"
-                android:id="@+id/editText"
+                android:id="@+id/edit_txtPhone"
                 android:layout_weight="0.18" />
         </LinearLayout>
 
@@ -110,11 +109,11 @@
                 android:textSize="16sp" />
 
             <EditText
+                android:id="@+id/edit_txtEmail"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:inputType="textEmailAddress"
                 android:ems="10"
-                android:id="@+id/editText"
                 android:layout_weight="0.18" />
         </LinearLayout>
 
@@ -150,7 +149,8 @@
             <Spinner
                 android:layout_width="100dp"
                 android:layout_height="20dp"
-
+                android:entries="@array/arr_tutor"
+                android:id="@+id/spn_tutor"
                 android:layout_weight="0.32" />
         </LinearLayout>
 
@@ -169,7 +169,8 @@
             <Spinner
                 android:layout_width="100dp"
                 android:layout_height="20dp"
-
+                android:entries="@array/arr_course"
+                android:id="@+id/spn_course"
                 android:layout_weight="0.32" />
         </LinearLayout>
 
