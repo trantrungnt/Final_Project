@@ -19,4 +19,12 @@
     <string name="label_yes">Yes</string>
     <string name="label_no">No</string>
     <string name="label_pay">Pay:</string>
+    <string name="promt_job">Select your job</string>
+    <string-array name="arr_job">
+        <item>Student</item>
+        <item>Worker</item>
+        <item>Farmer</item>
+        <item>Doctor</item>
+        <item>Developer</item>
+    </string-array>
 </resources>

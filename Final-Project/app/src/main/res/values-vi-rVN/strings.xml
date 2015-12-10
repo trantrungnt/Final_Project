@@ -19,4 +19,12 @@
     <string name="label_yes">Có</string>
     <string name="label_no">Không</string>
     <string name="label_pay">Nộp học phí:</string>
+    <string name="promt_job">Chọn công việc của bạn</string>
+    <string-array name="arr_job">
+        <item>Sinh viên</item>
+        <item>Công nhân</item>
+        <item>Nông dân</item>
+        <item>Bác sỹ</item>
+        <item>Lập trình viên</item>
+    </string-array>
 </resources>

@@ -2,81 +2,49 @@ package academy.android.vietnam.trungnt.learningeinglish;
 
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
-import android.view.Menu;
-import android.view.MenuItem;
-import android.widget.Spinner;
-import android.widget.ArrayAdapter;
 import android.view.View;
+import android.view.View.OnClickListener;
+import android.widget.Button;
+import android.widget.Spinner;
 import android.widget.TextView;
-import android.widget.AdapterView;
-import android.widget.AdapterView.OnItemSelectedListener;
+import academy.android.vietnam.trungnt.learningenglish.CustomOnItemSelectedListener;
+import android.widget.Toast;
 
 public class MainActivity extends AppCompatActivity {
-    //Tạo một mảng dữ liệu giả
-    String arr[]={
-            "Sinh viên",
-            "Nông dân",
-            "Công nhân"};
+    private Spinner spn_jobs, spn_tutors, spn_courses;
+    private Button btnRegister;
     TextView selection;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-        selection = (TextView) findViewById(R.id.selection);
-        //Lấy đối tượng Spinner ra
-        Spinner spin = (Spinner) findViewById(R.id.spn_job);
-        //Gán Data source (arr) vào Adapter
-        ArrayAdapter<String> adapter = new ArrayAdapter<String>
-        (
-            this,
-            android.R.layout.simple_spinner_item,
-            arr
-        );
-        //phải gọi lệnh này để hiển thị danh sách cho Spinner
-        adapter.setDropDownViewResource(android.R.layout.simple_list_item_single_choice);
-        //Thiết lập adapter cho Spinner
-        spin.setAdapter(adapter);
-        //thiết lập sự kiện chọn phần tử cho Spinner
-        spin.setOnItemSelectedListener(new MyProcessEvent());
+        addListenerOnSpinnerItemSelection();
+        addListenerOnButton();
     }
 
-    //Class tạo sự kiện
-    private class MyProcessEvent implements OnItemSelectedListener
-    {
-        //Khi có chọn lựa thì vào hàm này
-        public void onItemSelected(AdapterView<?> arg0,
-                                   View arg1,
-                                   int arg2,
-                                   long arg3) {
-            //arg2 là phần tử được chọn trong data source
-            selection.setText(arr[arg2]);
-        }
-        //Nếu không chọn gì cả
-        public void onNothingSelected(AdapterView<?> arg0) {
-            selection.setText("");
-        }
+    public void addListenerOnSpinnerItemSelection() {
+        spn_jobs = (Spinner) findViewById(R.id.spn_job);
+        spn_jobs.setOnItemSelectedListener(new CustomOnItemSelectedListener());
     }
 
-    @Override
-    public boolean onCreateOptionsMenu(Menu menu) {
-        // Inflate the menu; this adds items to the action bar if it is present.
-        getMenuInflater().inflate(R.menu.menu_main, menu);
-        return true;
-    }
 
-    @Override
-    public boolean onOptionsItemSelected(MenuItem item) {
-        // Handle action bar item clicks here. The action bar will
-        // automatically handle clicks on the Home/Up button, so long
-        // as you specify a parent activity in AndroidManifest.xml.
-        int id = item.getItemId();
+    // get the selected dropdown list value
+    public void addListenerOnButton() {
 
-        //noinspection SimplifiableIfStatement
-        if (id == R.id.action_settings) {
-            return true;
-        }
+        spn_jobs = (Spinner) findViewById(R.id.spn_job);
+        btnRegister = (Button) findViewById(R.id.btnRegister);
 
-        return super.onOptionsItemSelected(item);
+        btnRegister.setOnClickListener(new OnClickListener() {
+
+            @Override
+            public void onClick(View v) {
+                Toast.makeText(MainActivity.this,
+                        "OnClickListener : " +
+                                "\nSpinner job : "+ String.valueOf(spn_jobs.getSelectedItem()),
+
+                        Toast.LENGTH_SHORT).show();
+            }
+        });
     }
 }
