@@ -13,7 +13,7 @@ import android.widget.Toast;
 public class MainActivity extends AppCompatActivity {
     private Spinner spn_jobs, spn_tutors, spn_courses;
     private Button btnRegister;
-    TextView selection;
+    private TextView txtTemp;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -34,16 +34,12 @@ public class MainActivity extends AppCompatActivity {
 
         spn_jobs = (Spinner) findViewById(R.id.spn_job);
         btnRegister = (Button) findViewById(R.id.btnRegister);
+        txtTemp = (TextView) findViewById(R.id.selection);
 
         btnRegister.setOnClickListener(new OnClickListener() {
-
             @Override
             public void onClick(View v) {
-                Toast.makeText(MainActivity.this,
-                        "OnClickListener : " +
-                                "\nSpinner job : "+ String.valueOf(spn_jobs.getSelectedItem()),
-
-                        Toast.LENGTH_SHORT).show();
+                txtTemp.setText(String.valueOf(spn_jobs.getSelectedItem()));
             }
         });
     }
