@@ -69,6 +69,7 @@
                 android:textSize="16sp"
                 android:layout_weight="0.18" />
             <Spinner
+                android:id="@+id/spn_job"
                 android:layout_width="100dp"
                 android:layout_height="20dp"
 
@@ -202,7 +203,13 @@
                 android:id="@+id/female"
                 android:text="@string/label_no" />
         </RadioGroup>
-
+        <TextView
+            android:id="@+id/selection"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="#007380"
+            android:hint="selected here"
+            android:textColor="#ff003c" />
 
         <Button
             android:id="@+id/submitOrder"
