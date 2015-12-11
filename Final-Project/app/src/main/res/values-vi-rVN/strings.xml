@@ -3,7 +3,7 @@
     <string name="action_settings">Cấu hình</string>
     <string name="label_your_information">THÔNG TIN CỦA BẠN</string>
     <string name="label_register">Đăng ký</string>
-    <string name="label_name">Họ và tên</string>
+    <string name="label_name">Họ và tên:</string>
     <string name="label_male">Nam</string>
     <string name="label_female">Nữ</string>
     <string name="label_sex">Giới tính:</string>
@@ -42,4 +42,6 @@
         <item>Grammar</item>
         <item>Speak</item>
     </string-array>
+    <string name="information">Tôi cần học Tiếng Anh ở Antoree</string>
+    <string name="order_summary_email_subject">Đăng ký học Tiếng Anh tại Antoree</string>
 </resources>

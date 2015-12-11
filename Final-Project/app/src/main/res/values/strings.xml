@@ -3,7 +3,7 @@
     <string name="action_settings">Settings</string>
     <string name="label_your_information">Your information</string>
     <string name="label_register">Register</string>
-    <string name="label_name">Name</string>
+    <string name="label_name">Name: </string>
     <string name="label_male">Male</string>
     <string name="label_female">Female</string>
     <string name="label_sex">Sex:</string>
@@ -42,4 +42,6 @@
         <item>Grammar</item>
         <item>Speak</item>
     </string-array>
+    <string name="information">I need to learn English at Antoree</string>
+    <string name="order_summary_email_subject">Registration: Learning English at Antoree</string>
 </resources>
