@@ -17,8 +17,8 @@ public class MainActivity extends AppCompatActivity {
     private Spinner spn_jobs, spn_tutors, spn_courses;
     private Button btnRegister;
     private EditText edit_txtName, edit_txtPhone, edit_txtEmail, edit_txtHour, edit_txtTutionFee;
-    private RadioButton rdSex, rdPay;
-    private TextView tvPhone, tvEmail;
+    private RadioButton rdMale, rdFemale, rdPay;
+    private TextView tvPhone, tvEmail, tvSex;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -48,6 +48,7 @@ public class MainActivity extends AppCompatActivity {
 
         tvPhone = (TextView) findViewById(R.id.tvPhone);
         tvEmail = (TextView) findViewById(R.id.tvEmail);
+        tvSex = (TextView) findViewById(R.id.tvSex);
 
         edit_txtName = (EditText) findViewById(R.id.edit_txtName);
         Editable nameEditable = edit_txtName.getText();
@@ -68,6 +69,10 @@ public class MainActivity extends AppCompatActivity {
         edit_txtTutionFee = (EditText) findViewById(R.id.edit_txtTutionFee);
         Editable tution_feeEditable = edit_txtTutionFee.getText();
         final String tution_fee = tution_feeEditable.toString();
+
+        rdMale = (RadioButton) findViewById(R.id.male);
+        rdFemale = (RadioButton) findViewById(R.id.female);
+
 
         btnRegister = (Button) findViewById(R.id.btnRegister);
 
@@ -107,6 +112,13 @@ public class MainActivity extends AppCompatActivity {
                 {
                     Toast.makeText(MainActivity.this,
                             edit_txtTutionFee.getHint()  + ": ?",
+                            Toast.LENGTH_SHORT).show();
+                }
+
+                if(rdMale.isChecked()==false && rdFemale.isChecked()==false)
+                {
+                    Toast.makeText(MainActivity.this,
+                            tvSex.getHint()  + ": ?",
                             Toast.LENGTH_SHORT).show();
                 }
             }
