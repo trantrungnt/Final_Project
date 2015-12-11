@@ -85,6 +85,7 @@
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:id="@+id/tvPhone"
                 android:text="@string/label_phone"
                 android:textSize="16sp" />
 
@@ -106,6 +107,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="@string/label_email"
+                android:id="@+id/tvEmail"
                 android:textSize="16sp" />
 
             <EditText
@@ -179,14 +181,16 @@
             android:layout_height="wrap_content"
             android:hint="@string/label_hour"
             android:textSize="16sp"
-            />
+            android:id="@+id/edit_txtHour"
+         />
 
         <EditText
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:hint="@string/label_tuition_fee"
             android:textSize="16sp"
-            />
+            android:id="@+id/edit_txtTutionFee"
+        />
 
         <TextView
             android:layout_width="wrap_content"
@@ -206,13 +210,8 @@
                 android:id="@+id/female"
                 android:text="@string/label_no" />
         </RadioGroup>
-        <TextView
-            android:id="@+id/selection"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:background="#007380"
-            android:hint="selected here"
-            android:textColor="#ff003c" />
+
+
 
         <Button
             android:id="@+id/btnRegister"
