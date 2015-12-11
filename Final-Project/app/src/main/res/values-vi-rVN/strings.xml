@@ -43,5 +43,7 @@
         <item>Speak</item>
     </string-array>
     <string name="information">Tôi cần học Tiếng Anh ở Antoree</string>
-    <string name="order_summary_email_subject">Đăng ký học Tiếng Anh tại Antoree</string>
+    <string name="register_summary_email_subject">Đăng ký học Tiếng Anh tại Antoree</string>
+    <string name="label_author">TÁC GIẢ</string>
+    <string name="label_reset">ĐĂNG KÝ LẠI</string>
 </resources>

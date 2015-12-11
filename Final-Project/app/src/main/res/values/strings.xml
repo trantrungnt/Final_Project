@@ -43,5 +43,7 @@
         <item>Speak</item>
     </string-array>
     <string name="information">I need to learn English at Antoree</string>
-    <string name="order_summary_email_subject">Registration: Learning English at Antoree</string>
+    <string name="register_summary_email_subject">Registration: Learning English at Antoree</string>
+    <string name="label_author">AUTHOR</string>
+    <string name="label_reset">RESET</string>
 </resources>

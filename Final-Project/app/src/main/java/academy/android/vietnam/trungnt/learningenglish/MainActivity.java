@@ -169,7 +169,7 @@ public class MainActivity extends AppCompatActivity {
                     Intent intent = new Intent(Intent.ACTION_SENDTO);
                     intent.setData(Uri.parse("mailto:antoree@gmail.com")); // only email apps should handle this
                     intent.putExtra(Intent.EXTRA_SUBJECT,
-                            getString(R.string.order_summary_email_subject));
+                            getString(R.string.register_summary_email_subject));
                     intent.putExtra(Intent.EXTRA_TEXT, message);
 
                     if (intent.resolveActivity(getPackageManager()) != null) {
