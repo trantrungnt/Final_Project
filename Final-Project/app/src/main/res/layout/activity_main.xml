@@ -194,6 +194,7 @@
         />
 
         <TextView
+            android:id="@+id/tvStatusPay"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:hint="@string/label_pay"
@@ -205,10 +206,10 @@
             android:layout_height="wrap_content"
             android:padding="5px">
             <RadioButton
-                android:id="@+id/male"
+                android:id="@+id/yes"
                 android:text="@string/label_yes" />
             <RadioButton
-                android:id="@+id/female"
+                android:id="@+id/no"
                 android:text="@string/label_no" />
         </RadioGroup>
 

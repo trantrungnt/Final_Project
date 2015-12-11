@@ -1,6 +1,7 @@
 package academy.android.vietnam.trungnt.learningeinglish;
 
 import android.os.Bundle;
+import android.provider.MediaStore;
 import android.support.v7.app.AppCompatActivity;
 import android.text.Editable;
 import android.view.View;
@@ -17,8 +18,8 @@ public class MainActivity extends AppCompatActivity {
     private Spinner spn_jobs, spn_tutors, spn_courses;
     private Button btnRegister;
     private EditText edit_txtName, edit_txtPhone, edit_txtEmail, edit_txtHour, edit_txtTutionFee;
-    private RadioButton rdMale, rdFemale, rdPay;
-    private TextView tvPhone, tvEmail, tvSex;
+    private RadioButton rdMale, rdFemale, rdYes, rdNo;
+    private TextView tvPhone, tvEmail, tvSex, tvStatusPay;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -49,6 +50,7 @@ public class MainActivity extends AppCompatActivity {
         tvPhone = (TextView) findViewById(R.id.tvPhone);
         tvEmail = (TextView) findViewById(R.id.tvEmail);
         tvSex = (TextView) findViewById(R.id.tvSex);
+        tvStatusPay = (TextView) findViewById(R.id.tvStatusPay);
 
         edit_txtName = (EditText) findViewById(R.id.edit_txtName);
         Editable nameEditable = edit_txtName.getText();
@@ -72,7 +74,8 @@ public class MainActivity extends AppCompatActivity {
 
         rdMale = (RadioButton) findViewById(R.id.male);
         rdFemale = (RadioButton) findViewById(R.id.female);
-
+        rdYes = (RadioButton) findViewById(R.id.yes);
+        rdNo = (RadioButton) findViewById(R.id.no);
 
         btnRegister = (Button) findViewById(R.id.btnRegister);
 
@@ -119,6 +122,13 @@ public class MainActivity extends AppCompatActivity {
                 {
                     Toast.makeText(MainActivity.this,
                             tvSex.getHint()  + ": ?",
+                            Toast.LENGTH_SHORT).show();
+                }
+
+                if (rdYes.isChecked() == false && rdNo.isChecked() == false)
+                {
+                    Toast.makeText(MainActivity.this,
+                            tvStatusPay.getHint()  + ": ?",
                             Toast.LENGTH_SHORT).show();
                 }
             }
