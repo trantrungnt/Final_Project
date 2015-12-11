@@ -89,26 +89,26 @@ public class MainActivity extends AppCompatActivity {
                             Toast.LENGTH_SHORT).show();
                 }
 
-               /* if (email.isEmpty())
+                if (edit_txtEmail.getText().length() == 0)
                 {
                     Toast.makeText(MainActivity.this,
                             tvEmail.getText() + ": ?",
                             Toast.LENGTH_SHORT).show();
                 }
 
-                if (hour.isEmpty())
+                if (edit_txtHour.getText().length() == 0)
                 {
                     Toast.makeText(MainActivity.this,
                             edit_txtHour.getHint()  + ": ?",
                             Toast.LENGTH_SHORT).show();
                 }
 
-                if (tution_fee.isEmpty())
+                if (edit_txtTutionFee.getText().length() == 0)
                 {
                     Toast.makeText(MainActivity.this,
                             edit_txtTutionFee.getHint()  + ": ?",
                             Toast.LENGTH_SHORT).show();
-                }*/
+                }
             }
         });
     }
