@@ -199,21 +199,21 @@ public class MainActivity extends AppCompatActivity {
         builder.append("\n" + getString(R.string.label_job) + " " + job);
 
         if(male==true && female==false)
-            builder.append("\n" + getString(R.string.label_sex) + R.string.label_male);
+            builder.append("\n" + getString(R.string.label_sex) + " " + getString(R.string.label_male));
         if(male==false && female==true)
-            builder.append("\n" + getString(R.string.label_sex) + R.string.label_female);
+            builder.append("\n" + getString(R.string.label_sex) + " " + getString(R.string.label_female));
 
         builder.append("\n" + getString(R.string.label_phone) + " " + phone);
         builder.append("\n" + getString(R.string.label_email) + " " + email);
         builder.append("\n" + getString(R.string.label_hour) + " " + hour);
-        builder.append("\n" + getString(R.string.label_pay) + " " + tution_fee);
+        builder.append("\n" + getString(R.string.label_pay) + " " + tution_fee + " (VND)");
         builder.append("\n" + getString(R.string.label_tutor) + " " + tutor);
         builder.append("\n" + getString(R.string.label_course) + " " + course);
 
         if(yes==true && no==false)
-            builder.append("\n" + getString(R.string.label_pay) + " " + R.string.label_yes);
+            builder.append("\n" + getString(R.string.label_pay) + " " + getString(R.string.label_yes));
         if(yes==false && no==true)
-            builder.append("\n" + getString(R.string.label_pay) + " " + R.string.label_no);
+            builder.append("\n" + getString(R.string.label_pay) + " " + getString(R.string.label_no));
 
         builder.append("\n" + getString(R.string.information));
 
