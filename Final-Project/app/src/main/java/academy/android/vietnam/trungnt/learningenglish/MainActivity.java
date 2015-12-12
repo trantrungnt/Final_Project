@@ -10,6 +10,8 @@ import android.view.View;
 import android.view.View.OnClickListener;
 import android.widget.Button;
 import android.widget.Spinner;
+
+import academy.android.vietnam.trungnt.learningenglish.AuthorActivity;
 import academy.android.vietnam.trungnt.learningenglish.CustomOnItemSelectedListener;
 import android.widget.Toast;
 import android.widget.EditText;
@@ -20,7 +22,7 @@ import java.text.NumberFormat;
 
 public class MainActivity extends AppCompatActivity {
     private Spinner spn_jobs, spn_tutors, spn_courses;
-    private Button btnRegister, btnReset;
+    private Button btnRegister, btnReset, btnAuthor;
     private EditText edit_txtName, edit_txtPhone, edit_txtEmail, edit_txtHour, edit_txtTutionFee;
     private RadioButton rdMale, rdFemale, rdYes, rdNo;
     private TextView tvPhone, tvEmail, tvSex, tvStatusPay;
@@ -32,6 +34,7 @@ public class MainActivity extends AppCompatActivity {
         addListenerOnSpinnerItemSelection();
         addListenerOnButton();
         processResetValue();
+        processAuthor();
     }
 
     public void addListenerOnSpinnerItemSelection() {
@@ -246,4 +249,25 @@ public class MainActivity extends AppCompatActivity {
         rdYes.setChecked(false);
         rdNo.setChecked(false);
     }
+
+    public void processAuthor()
+    {
+        btnAuthor = (Button) findViewById(R.id.btnAuthor);
+
+        btnAuthor.setOnClickListener(new OnClickListener() {
+                 @Override
+                 public void onClick(View v) {
+                     doOpenAuthor();
+                 }
+             }
+        );
+    }
+
+    //Open UI Author
+    private void doOpenAuthor()
+    {
+        Intent myIntentAuthor = new Intent(this, AuthorActivity.class);
+        startActivity(myIntentAuthor);
+    }
+
 }
