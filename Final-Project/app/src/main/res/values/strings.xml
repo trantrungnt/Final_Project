@@ -48,4 +48,7 @@
     <string name="label_reset">RESET</string>
     <string name="label_back">BACK</string>
     <string name="label_name_author">Trung Tran Nguyen</string>
+    <string name="label_class_author">Class:</string>
+    <string name="label_mentor">Mentor:</string>
+    <string name="label_name_mentor">Tam Duc Tran</string>
 </resources>

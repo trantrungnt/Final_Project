@@ -39,8 +39,8 @@
     <string-array name="arr_course">
         <item>TOEIC</item>
         <item>TOEFL</item>
-        <item>Grammar</item>
-        <item>Speak</item>
+        <item>Ngữ pháp</item>
+        <item>Luyện nói</item>
     </string-array>
     <string name="information">Tôi cần học Tiếng Anh ở Antoree</string>
     <string name="register_summary_email_subject">Đăng ký học Tiếng Anh tại Antoree</string>
@@ -48,4 +48,7 @@
     <string name="label_reset">ĐĂNG KÝ LẠI</string>
     <string name="label_back">QUAY LẠI</string>
     <string name="label_name_author">Nguyễn Trần Trung</string>
+    <string name="label_class_author">Lớp:</string>
+    <string name="label_mentor">Người hướng dẫn:</string>
+    <string name="label_name_mentor">Trần Đức Tâm</string>
 </resources>
