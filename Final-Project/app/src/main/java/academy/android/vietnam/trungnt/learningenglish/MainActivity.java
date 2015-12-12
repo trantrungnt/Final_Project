@@ -20,7 +20,7 @@ import java.text.NumberFormat;
 
 public class MainActivity extends AppCompatActivity {
     private Spinner spn_jobs, spn_tutors, spn_courses;
-    private Button btnRegister;
+    private Button btnRegister, btnReset;
     private EditText edit_txtName, edit_txtPhone, edit_txtEmail, edit_txtHour, edit_txtTutionFee;
     private RadioButton rdMale, rdFemale, rdYes, rdNo;
     private TextView tvPhone, tvEmail, tvSex, tvStatusPay;
@@ -31,6 +31,7 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
         addListenerOnSpinnerItemSelection();
         addListenerOnButton();
+        processResetValue();
     }
 
     public void addListenerOnSpinnerItemSelection() {
@@ -51,8 +52,7 @@ public class MainActivity extends AppCompatActivity {
 
         btnRegister.setOnClickListener(new OnClickListener() {
             @Override
-            public void onClick(View v)
-            {
+            public void onClick(View v) {
                 spn_jobs = (Spinner) findViewById(R.id.spn_job);
                 spn_tutors = (Spinner) findViewById(R.id.spn_tutor);
                 spn_courses = (Spinner) findViewById(R.id.spn_course);
@@ -87,65 +87,57 @@ public class MainActivity extends AppCompatActivity {
                 Editable tution_feeEditable = edit_txtTutionFee.getText();
                 String tution_fee = tution_feeEditable.toString();
 
-                if (edit_txtName.getText().length() == 0)
-                {
+                if (edit_txtName.getText().length() == 0) {
                     Toast.makeText(MainActivity.this,
-                           edit_txtName.getHint()  + ": ?",
+                            edit_txtName.getHint() + ": ?",
                             Toast.LENGTH_SHORT).show();
                 }
 
-                if (edit_txtPhone.getText().length() == 0)
-                {
+                if (edit_txtPhone.getText().length() == 0) {
                     Toast.makeText(MainActivity.this,
                             tvPhone.getText() + ": ?",
                             Toast.LENGTH_SHORT).show();
                 }
 
-                if (edit_txtEmail.getText().length() == 0)
-                {
+                if (edit_txtEmail.getText().length() == 0) {
                     Toast.makeText(MainActivity.this,
                             tvEmail.getText() + ": ?",
                             Toast.LENGTH_SHORT).show();
                 }
 
-                if (edit_txtHour.getText().length() == 0)
-                {
+                if (edit_txtHour.getText().length() == 0) {
                     Toast.makeText(MainActivity.this,
-                            edit_txtHour.getHint()  + ": ?",
+                            edit_txtHour.getHint() + ": ?",
                             Toast.LENGTH_SHORT).show();
                 }
 
-                if (edit_txtTutionFee.getText().length() == 0)
-                {
+                if (edit_txtTutionFee.getText().length() == 0) {
                     Toast.makeText(MainActivity.this,
-                            edit_txtTutionFee.getHint()  + ": ?",
+                            edit_txtTutionFee.getHint() + ": ?",
                             Toast.LENGTH_SHORT).show();
                 }
 
-                if(rdMale.isChecked()==false && rdFemale.isChecked()==false)
-                {
+                if (rdMale.isChecked() == false && rdFemale.isChecked() == false) {
                     Toast.makeText(MainActivity.this,
-                            tvSex.getHint()  + ": ?",
+                            tvSex.getHint() + ": ?",
                             Toast.LENGTH_SHORT).show();
                 }
 
-                if (rdYes.isChecked() == false && rdNo.isChecked() == false)
-                {
+                if (rdYes.isChecked() == false && rdNo.isChecked() == false) {
                     Toast.makeText(MainActivity.this,
-                            tvStatusPay.getHint()  + ": ?",
+                            tvStatusPay.getHint() + ": ?",
                             Toast.LENGTH_SHORT).show();
                 }
 
 
-                if(  (
+                if ((
                         edit_txtName.getText().length() != 0 &&
-                        edit_txtPhone.getText().length() != 0 &&
-                        edit_txtEmail.getText().length() != 0 &&
-                        edit_txtHour.getText().length() != 0 &&
-                        edit_txtTutionFee.getText().length() !=0
-                     )
-                   )
-                {
+                                edit_txtPhone.getText().length() != 0 &&
+                                edit_txtEmail.getText().length() != 0 &&
+                                edit_txtHour.getText().length() != 0 &&
+                                edit_txtTutionFee.getText().length() != 0
+                )
+                        ) {
                     /*Toast.makeText(MainActivity.this,
                         String.valueOf(spn_tutors.getSelectedItem())  + ": ?",
                                                     Toast.LENGTH_SHORT).show();*/
@@ -218,5 +210,40 @@ public class MainActivity extends AppCompatActivity {
         builder.append("\n" + getString(R.string.information));
 
         return builder.toString();
+    }
+
+    public void processResetValue()
+    {
+        btnReset = (Button) findViewById(R.id.btnReset);
+
+        btnReset.setOnClickListener(new OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                ResetValue();
+            }
+        });
+    }
+
+    private void ResetValue()
+    {
+        edit_txtName = (EditText) findViewById(R.id.edit_txtName);
+        edit_txtPhone = (EditText) findViewById(R.id.edit_txtPhone);
+        edit_txtEmail = (EditText) findViewById(R.id.edit_txtEmail);
+        edit_txtHour = (EditText) findViewById(R.id.edit_txtHour);
+        edit_txtTutionFee = (EditText) findViewById(R.id.edit_txtTutionFee);
+        rdMale = (RadioButton) findViewById(R.id.male);
+        rdFemale = (RadioButton) findViewById(R.id.female);
+        rdYes = (RadioButton) findViewById(R.id.yes);
+        rdNo = (RadioButton) findViewById(R.id.no);
+
+        edit_txtName.setText("");
+        edit_txtPhone.setText("");
+        edit_txtEmail.setText("");
+        edit_txtHour.setText("");
+        edit_txtTutionFee.setText("");
+        rdMale.setChecked(false);
+        rdFemale.setChecked(false);
+        rdYes.setChecked(false);
+        rdNo.setChecked(false);
     }
 }
