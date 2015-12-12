@@ -47,4 +47,5 @@
     <string name="label_author">AUTHOR</string>
     <string name="label_reset">RESET</string>
     <string name="label_back">BACK</string>
+    <string name="label_name_author">Trung Tran Nguyen</string>
 </resources>

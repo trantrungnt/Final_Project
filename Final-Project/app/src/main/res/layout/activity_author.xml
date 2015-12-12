@@ -3,6 +3,47 @@
     android:orientation="vertical" android:layout_width="match_parent"
     android:layout_height="match_parent">
 
+    <ImageView
+        android:layout_width="200dp"
+        android:layout_height="200dp"
+        android:src="@drawable/trungnt"
+        android:layout_marginTop="10dp"
+        android:layout_gravity="center"
+
+    />
+
+    <TextView
+        style="@style/HeaderTextStyle"
+        android:layout_width="350dp"
+        android:layout_height="4dp"
+        android:background="@color/colorBlue"
+        android:layout_gravity="center"
+        android:layout_marginTop="10dp"
+    />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_marginTop="10dp">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/label_name"
+            android:textSize="20sp"
+            android:layout_marginLeft="20dp"
+        />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/label_name_author"
+            android:textSize="20sp"
+            android:layout_marginLeft="20dp"
+            />
+    </LinearLayout>
+
     <Button
         android:id="@+id/btnBack"
         android:layout_width="wrap_content"
