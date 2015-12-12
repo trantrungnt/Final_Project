@@ -3,7 +3,6 @@ package academy.android.vietnam.trungnt.learningeinglish;
 import android.content.Intent;
 import android.net.Uri;
 import android.os.Bundle;
-import android.provider.MediaStore;
 import android.support.v7.app.AppCompatActivity;
 import android.text.Editable;
 import android.view.View;
@@ -17,8 +16,6 @@ import android.widget.Toast;
 import android.widget.EditText;
 import android.widget.RadioButton;
 import android.widget.TextView;
-
-import java.text.NumberFormat;
 
 public class MainActivity extends AppCompatActivity {
     private Spinner spn_jobs, spn_tutors, spn_courses;
@@ -92,19 +89,19 @@ public class MainActivity extends AppCompatActivity {
 
                 if (edit_txtName.getText().length() == 0) {
                     Toast.makeText(MainActivity.this,
-                            edit_txtName.getHint() + ": ?",
+                            edit_txtName.getHint() + " ?",
                             Toast.LENGTH_SHORT).show();
                 }
 
                 if (edit_txtPhone.getText().length() == 0) {
                     Toast.makeText(MainActivity.this,
-                            tvPhone.getText() + ": ?",
+                            tvPhone.getText() + " ?",
                             Toast.LENGTH_SHORT).show();
                 }
 
                 if (edit_txtEmail.getText().length() == 0) {
                     Toast.makeText(MainActivity.this,
-                            tvEmail.getText() + ": ?",
+                            tvEmail.getText() + " ?",
                             Toast.LENGTH_SHORT).show();
                 }
 
@@ -122,13 +119,13 @@ public class MainActivity extends AppCompatActivity {
 
                 if (rdMale.isChecked() == false && rdFemale.isChecked() == false) {
                     Toast.makeText(MainActivity.this,
-                            tvSex.getHint() + ": ?",
+                            tvSex.getHint() + " ?",
                             Toast.LENGTH_SHORT).show();
                 }
 
                 if (rdYes.isChecked() == false && rdNo.isChecked() == false) {
                     Toast.makeText(MainActivity.this,
-                            tvStatusPay.getHint() + ": ?",
+                            tvStatusPay.getHint() + " ?",
                             Toast.LENGTH_SHORT).show();
                 }
 
@@ -200,7 +197,7 @@ public class MainActivity extends AppCompatActivity {
 
         builder.append("\n" + getString(R.string.label_phone) + " " + phone);
         builder.append("\n" + getString(R.string.label_email) + " " + email);
-        builder.append("\n" + getString(R.string.label_hour) + " " + hour);
+        builder.append("\n" + getString(R.string.label_hour) + ": " + hour);
         builder.append("\n" + getString(R.string.label_pay) + " " + tution_fee + " (VND)");
         builder.append("\n" + getString(R.string.label_tutor) + " " + tutor);
         builder.append("\n" + getString(R.string.label_course) + " " + course);
