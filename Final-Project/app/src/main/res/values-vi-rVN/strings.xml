@@ -51,4 +51,6 @@
     <string name="label_class_author">Lớp:</string>
     <string name="label_mentor">Người hướng dẫn:</string>
     <string name="label_name_mentor">Trần Đức Tâm</string>
+    <string name="label_batch">Khóa:</string>
+    <string name="label_source_code">Mã nguồn của tôi:</string>
 </resources>

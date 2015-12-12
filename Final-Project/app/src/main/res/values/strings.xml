@@ -51,4 +51,6 @@
     <string name="label_class_author">Class:</string>
     <string name="label_mentor">Mentor:</string>
     <string name="label_name_mentor">Tam Duc Tran</string>
+    <string name="label_batch">Batch:</string>
+    <string name="label_source_code">My source code:</string>
 </resources>
