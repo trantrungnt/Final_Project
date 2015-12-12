@@ -20,6 +20,7 @@
         </activity>
         <activity
             android:name="academy.android.vietnam.trungnt.learningenglish.AuthorActivity"
+            android:screenOrientation="portrait"
             android:label="@string/label_author" >
         </activity>
     </application>
