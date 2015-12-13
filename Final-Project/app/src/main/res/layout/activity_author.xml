@@ -172,7 +172,7 @@
             android:layout_height="wrap_content"
             android:text="github.com/trantrungnt/Final_Project"
             android:textSize="11sp"
-            android:layout_marginLeft="5dp"
+            android:layout_marginLeft="3dp"
             />
     </LinearLayout>
 

@@ -181,6 +181,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:hint="@string/label_hour"
+            android:inputType="number"
             android:textSize="16sp"
             android:id="@+id/edit_txtHour"
          />
@@ -189,6 +190,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:hint="@string/label_tuition_fee"
+            android:inputType="number"
             android:textSize="16sp"
             android:id="@+id/edit_txtTutionFee"
         />
